@@ -6,8 +6,8 @@ export default function cars() {
 		<Page>
 			<div className="carlist-page">
 				<div className="container py-5">
-					<table class="table">
-						<thead class="thead-light">
+					<table className="table">
+						<thead className="thead-light">
 							<tr>
 								<th scope="col">#</th>
 								<th scope="col">Name</th>
@@ -22,10 +22,10 @@ export default function cars() {
 								<td>$999</td>
 								<td>
 									<button className="btn btn-sm btn-primary">
-										<i class="fas fa-pencil-alt"></i>
+										<i className="fas fa-pencil-alt"></i>
 									</button>
 									<button className="btn btn-sm btn-danger">
-										<i class="fas fa-trash-alt"></i>
+										<i className="fas fa-trash-alt"></i>
 									</button>
 								</td>
 							</tr>

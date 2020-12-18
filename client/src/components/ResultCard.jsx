@@ -3,8 +3,8 @@ import React from "react";
 export default function ResultCard() {
 	return (
 		<div className="result-card">
-			<div class="card">
-				<div class="card-body">
+			<div className="card">
+				<div className="card-body">
 					<div className="row">
 						<div className="col-3">
 							<div className="img-wrapper">
