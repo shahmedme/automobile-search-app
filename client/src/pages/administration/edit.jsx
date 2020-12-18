@@ -161,7 +161,7 @@ export default function AddCar(props) {
 										<div className="form-group">
 											<div className="col-sm-offset-3 col-sm-12 text-center">
 												<button type="submit" className="btn btn-primary px-5">
-													Add Car
+													Update Car
 												</button>
 											</div>
 										</div>

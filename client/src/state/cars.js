@@ -22,15 +22,22 @@ export default function reducer(state = initialState, action) {
 				cars: state.cars.concat(action.payload),
 			};
 		case UPDATE:
-			console.log("state is", state);
 			let newState = state.cars.filter((car) => {
 				return car._id !== action.payload._id;
 			});
-			console.log("new state is", newState);
 
 			return {
 				...state,
 				cars: newState.concat(action.payload),
+			};
+		case DELETE:
+			let filteredData = state.cars.filter((car) => {
+				return car._id !== action.payload._id;
+			});
+
+			return {
+				...state,
+				cars: filteredData,
 			};
 		default:
 			return state;
@@ -68,5 +75,25 @@ export function updateCar(car) {
 			type: UPDATE,
 			payload: car,
 		});
+	};
+}
+
+export function deleteCar(carId) {
+	return (dispatch) => {
+		const obj = {
+			_id: carId,
+		};
+		axios
+			.delete("/api/cars", { data: obj })
+			.then(function (res) {
+				console.log(res.data);
+				dispatch({
+					type: DELETE,
+					payload: res.data,
+				});
+			})
+			.catch((err) => {
+				console.log(err);
+			});
 	};
 }

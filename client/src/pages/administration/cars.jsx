@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { loadCars } from "../../state/cars";
+import { loadCars, deleteCar } from "../../state/cars";
 import Page from "../../components/Page";
 
 export default function Cars(props) {
@@ -11,6 +11,10 @@ export default function Cars(props) {
 	useEffect(() => {
 		dispatch(loadCars());
 	}, []);
+
+	const handleDeleteClick = (carId) => {
+		dispatch(deleteCar(carId));
+	};
 
 	return (
 		<Page>
@@ -42,7 +46,10 @@ export default function Cars(props) {
 										>
 											<i className="fas fa-pencil-alt"></i>
 										</Link>
-										<button className="btn btn-sm btn-danger">
+										<button
+											className="btn btn-sm btn-danger"
+											onClick={() => handleDeleteClick(car._id)}
+										>
 											<i className="fas fa-trash-alt"></i>
 										</button>
 									</td>
