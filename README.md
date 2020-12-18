@@ -4,7 +4,7 @@ Find best car deals and buy easily.
 
 ## Proedure to run this
 
-This project is made with JavaScript stack. For frontend I used React, React Hooks, Reduxt, axios, React Router, Bootstrap etc. And for backend I used express.js, TypeScript, MongoDB, Mongoose etc.
+This project is made with JavaScript stack. For frontend I used React, React Hooks, Redux, axios, React Router, Bootstrap etc. And for backend I used express.js, TypeScript, MongoDB, Mongoose etc.
 
 It has full CRUD API in backend.
 
