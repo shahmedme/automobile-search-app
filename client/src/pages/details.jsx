@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import Page from "../components/Page";
 
-export default function Details() {
+export default function Details(props) {
+	const cars = useSelector((state) => state.cars);
+	const [selectedCar, setSelectedCar] = useState({});
+
+	useEffect(() => {
+		let newCar = cars.cars.filter((car) => {
+			return car._id === props.match.params.id;
+		});
+
+		setSelectedCar(newCar[0]);
+	}, []);
+
 	return (
 		<Page>
 			<div className="details-page py-5">
+				{console.log(selectedCar)}
 				<div className="container">
 					<div className="row">
 						<div className="col-md-6">
@@ -18,13 +31,10 @@ export default function Details() {
 						</div>
 						<div className="col-md-6">
 							<div className="content">
-								<h4 className="title">Alpha Beta Gamma</h4>
-								<h6 className="price">$999</h6>
+								<h4 className="title">{selectedCar.title}</h4>
+								<h6 className="price">${selectedCar.price}</h6>
 								<small>
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem,
-									repellat ipsam non quia doloribus ullam. Saepe velit eligendi
-									repellat voluptatem? Lorem ipsum dolor sit amet consectetur
-									adipisicing elit. Quis dolor quas dolorem repellendus?
+									{selectedCar.description}
 									<span className="more">more</span>
 								</small>
 								<div className="mt-4">

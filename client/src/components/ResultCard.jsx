@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function ResultCard(props) {
 	return (
@@ -18,7 +19,11 @@ export default function ResultCard(props) {
 						<div className="col-8">
 							<div className="row">
 								<div className="col-9">
-									<h5 className="name">{props.data.title}</h5>
+									<h5 className="name">
+										<Link to={`/car/${props.data._id}`}>
+											{props.data.title}
+										</Link>
+									</h5>
 									<small>{props.data.description}</small>
 								</div>
 								<div className="col-3">

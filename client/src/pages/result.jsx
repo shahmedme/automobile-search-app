@@ -6,7 +6,6 @@ import ResultCard from "../components/ResultCard";
 export default function Result(props) {
 	const cars = useSelector((state) => state.cars);
 	const [localCars, setLocalCar] = useState([]);
-	// const [notFound, setNotFound] = useState(false);
 
 	useEffect(() => {
 		let newCars = cars.cars.filter((car) => {
