@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const LOAD = "LOAD";
 // const CREATE = 'CREATE';
 // const UPDATE = 'UPDATE';
@@ -9,6 +11,10 @@ const initialState = {
 
 export default function reducer(state = initialState, action) {
 	switch (action.type) {
+		case LOAD:
+			return {
+				cars: action.payload,
+			};
 		default:
 			return state;
 	}
@@ -16,8 +22,16 @@ export default function reducer(state = initialState, action) {
 
 export function loadCars() {
 	return (dispatch) => {
-		dispatch({
-			type: LOAD,
-		});
+		axios
+			.get("/api/cars")
+			.then(function (res) {
+				dispatch({
+					type: LOAD,
+					payload: res.data,
+				});
+			})
+			.catch((err) => {
+				console.log(err);
+			});
 	};
 }

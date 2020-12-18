@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { loadCars } from "../state/cars";
 import Search from "../components/Search";
 
-export default function home() {
+function Home(props) {
+	const cars = useSelector((state) => state.cars);
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(loadCars());
+	}, []);
+
 	return (
-		<>
+		<div className="homepage">
 			<section className="hero">
 				<div className="container">
 					<div className="text-center wrapper">
@@ -15,6 +24,8 @@ export default function home() {
 					</div>
 				</div>
 			</section>
-		</>
+		</div>
 	);
 }
+
+export default Home;

@@ -25,11 +25,16 @@ body {
   padding-bottom: 0px;
 }
 
-.hero .wrapper {
-  margin-top: 200px;
+.homepage {
+  background: #f1f1f1;
+  height: 100vh;
 }
 
-.hero .wrapper .title {
+.homepage .hero .wrapper {
+  padding-top: 200px;
+}
+
+.homepage .hero .wrapper .title {
   font-weight: bold;
   text-transform: capitalize;
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ResultCard() {
+export default function ResultCard(props) {
 	return (
 		<div className="result-card">
 			<div className="card">
@@ -18,11 +18,8 @@ export default function ResultCard() {
 						<div className="col-8">
 							<div className="row">
 								<div className="col-9">
-									<h5 className="name">Mercedes Bens C63 2017</h5>
-									<small>
-										Lorem ipsum dolor sit amet consectetur adipisicing elit.
-										Esse, quos neque id quaerat itaque dolorem!
-									</small>
+									<h5 className="name">{props.data.title}</h5>
+									<small>{props.data.description}</small>
 								</div>
 								<div className="col-3">
 									<div className="pricing">
@@ -33,7 +30,7 @@ export default function ResultCard() {
 											href="/"
 											className="btn btn-sm btn-secondary d-block mt-2"
 										>
-											$95223
+											${props.data.price}
 										</a>
 									</div>
 								</div>

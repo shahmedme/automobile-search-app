@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import Page from "../components/Page";
 import ResultCard from "../components/ResultCard";
 
-export default function home() {
+export default function Result(props) {
+	const cars = useSelector((state) => state.cars);
+	const [localCars, setLocalCar] = useState([]);
+	// const [notFound, setNotFound] = useState(false);
+
+	useEffect(() => {
+		let newCars = cars.cars.filter((car) => {
+			return car.brand === props.match.params.term;
+		});
+
+		setLocalCar(newCars);
+	}, []);
+
 	return (
 		<Page>
+			{console.log(localCars)}
 			<div className="result-page">
 				<section className="py-3">
 					<div className="container-fluid">
@@ -34,7 +48,11 @@ export default function home() {
 									<Sidebar />
 								</div>
 								<div className="col-md-9">
-									<ResultCard />
+									{localCars.length == 0 ? (
+										<h1>Not Found</h1>
+									) : (
+										localCars.map((localCar) => <ResultCard data={localCar} />)
+									)}
 								</div>
 							</div>
 						</div>

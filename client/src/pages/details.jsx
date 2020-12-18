@@ -1,7 +1,7 @@
 import React from "react";
 import Page from "../components/Page";
 
-export default function details() {
+export default function Details() {
 	return (
 		<Page>
 			<div className="details-page py-5">

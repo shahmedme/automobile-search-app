@@ -1,10 +1,15 @@
-.hero {
-	.wrapper {
-		margin-top: 200px;
+.homepage {
+	background: #f1f1f1;
+	height: 100vh;
 
-		.title {
-			font-weight: bold;
-			text-transform: capitalize;
+	.hero {
+		.wrapper {
+			padding-top: 200px;
+
+			.title {
+				font-weight: bold;
+				text-transform: capitalize;
+			}
 		}
 	}
 }
