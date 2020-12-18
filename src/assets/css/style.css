@@ -1,0 +1,54 @@
+.bg-def {
+  background: #e7e9eb;
+}
+
+.bg-white {
+  background: #fff;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.result-card .img-wrapper {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.result-card .name {
+  font-weight: bold;
+  color: #249af3;
+}
+
+.navbar {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.hero .wrapper {
+  margin-top: 200px;
+}
+
+.hero .wrapper .title {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.result-page h1 {
+  color: blue;
+}
+
+.details-page .img-wrapper {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.details-page .content .title {
+  font-weight: bold;
+}
+
+.details-page .content .more {
+  color: #249af3;
+  margin-left: 5px;
+}
+/*# sourceMappingURL=style.css.map */
