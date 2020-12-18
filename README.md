@@ -4,11 +4,11 @@ Find best car deals and buy easily.
 
 ## Proedure to run this
 
-This project is made with JavaScript stack. For frontend I used React, React Hooks, Redux, axios, React Router, Bootstrap etc. And for backend I used express.js, TypeScript, MongoDB, Mongoose etc.
+This project is made with JavaScript stack. For frontend I used React, React Hooks, Redux, Axios, React Router, Bootstrap etc. And for backend I used express.js, TypeScript, MongoDB, Mongoose etc.
 
 It has full CRUD API in backend.
 
-Frontend and Backend is separated directory.
+Frontend and Backend has separate directory.
 
 ### Setup Backend API Server
 
@@ -25,7 +25,7 @@ Frontend and Backend is separated directory.
 
 ### Usage
 
-- Landing page have a search bar. Search car by brand name. Make Sure you added the before searching.
+- Landing page have a search bar. Search car by brand name. Make Sure you added them before searching, otherwise no result will be found.
 - You can add new car, update, delete and read also.
 
 _Screenshot are added to the `screenshot` folder of this repo_
