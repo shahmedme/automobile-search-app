@@ -1,7 +1,8 @@
 import axios from "axios";
+import cars from "../pages/administration/cars";
 
 const LOAD = "LOAD";
-// const CREATE = 'CREATE';
+const CREATE = "CREATE";
 // const UPDATE = 'UPDATE';
 // const DELETE = 'DELETE';
 
@@ -14,6 +15,11 @@ export default function reducer(state = initialState, action) {
 		case LOAD:
 			return {
 				cars: action.payload,
+			};
+		case CREATE:
+			return {
+				...state,
+				cars: state.cars.concat(action.payload),
 			};
 		default:
 			return state;
@@ -33,5 +39,14 @@ export function loadCars() {
 			.catch((err) => {
 				console.log(err);
 			});
+	};
+}
+
+export function addCar(car) {
+	return (dispatch) => {
+		dispatch({
+			type: CREATE,
+			payload: car,
+		});
 	};
 }

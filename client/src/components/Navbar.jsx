@@ -16,19 +16,19 @@ export default function Navbar() {
 					</button>
 					<div className="collapse navbar-collapse flex-1">
 						<ul className="nav navbar-nav w-100">
-							<li className="nav-item active">
+							<li className="nav-item">
 								<Link className="nav-link" to="/">
 									Home
 								</Link>
 							</li>
 							<li className="nav-item">
 								<Link className="nav-link" to="/">
-									Register
+									Help
 								</Link>
 							</li>
 							<li className="nav-item">
 								<Link className="nav-link" to="/">
-									More
+									Contact
 								</Link>
 							</li>
 						</ul>
@@ -42,12 +42,12 @@ export default function Navbar() {
 						<ul className="nav navbar-nav ml-auto">
 							<li className="nav-item">
 								<Link className="nav-link" to="/">
-									Help
+									Cars
 								</Link>
 							</li>
 							<li className="nav-item">
-								<Link className="nav-link" to="/">
-									Contact
+								<Link className="nav-link" to="/add-car">
+									Add Car
 								</Link>
 							</li>
 						</ul>

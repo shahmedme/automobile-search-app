@@ -47,8 +47,8 @@ export default function Result(props) {
 									<Sidebar />
 								</div>
 								<div className="col-md-9">
-									{localCars.length == 0 ? (
-										<h1>Not Found</h1>
+									{localCars.length === 0 ? (
+										<h1>No Car Found</h1>
 									) : (
 										localCars.map((localCar) => <ResultCard data={localCar} />)
 									)}
