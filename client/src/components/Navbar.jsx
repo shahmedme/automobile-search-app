@@ -41,7 +41,7 @@ export default function Navbar() {
 					<div className="collapse navbar-collapse flex-1">
 						<ul className="nav navbar-nav ml-auto">
 							<li className="nav-item">
-								<Link className="nav-link" to="/">
+								<Link className="nav-link" to="/cars">
 									Cars
 								</Link>
 							</li>

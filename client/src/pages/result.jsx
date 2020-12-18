@@ -17,7 +17,6 @@ export default function Result(props) {
 
 	return (
 		<Page>
-			{console.log(localCars)}
 			<div className="result-page">
 				<section className="py-3">
 					<div className="container-fluid">

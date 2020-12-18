@@ -17,7 +17,6 @@ export default function Details(props) {
 	return (
 		<Page>
 			<div className="details-page py-5">
-				{console.log(selectedCar)}
 				<div className="container">
 					<div className="row">
 						<div className="col-md-6">

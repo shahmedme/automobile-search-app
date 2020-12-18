@@ -20,7 +20,7 @@ export default function App() {
 					<Route exact path="/car/:id" component={DetailsPage} />
 					<Route exact path="/add-car" component={CarAddPage} />
 					<Route exact path="/cars" component={CarListPage} />
-					<Route exact path="/edit" component={EditPage} />
+					<Route exact path="/edit/:id" component={EditPage} />
 					<Route path="*" component={NotFoundPage} />
 				</Switch>
 			</Router>

@@ -28,7 +28,6 @@ export default function AddCar() {
 			.post("/api/cars", newCar)
 			.then(function (res) {
 				dispatch(addCar(res.data));
-				console.log("setting new car");
 				setNewCar(res.data);
 			})
 			.catch((err) => {
@@ -142,11 +141,9 @@ export default function AddCar() {
 												<input type="file" name="file_img" />
 											</div>
 										</div>
-
-										<hr />
 										<div className="form-group">
-											<div className="col-sm-offset-3 col-sm-12">
-												<button type="submit" className="btn btn-primary">
+											<div className="col-sm-offset-3 col-sm-12 text-center">
+												<button type="submit" className="btn btn-primary px-5">
 													Add Car
 												</button>
 											</div>
